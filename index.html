@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+
+    <script>
+        // ==========================================
+        // EDIT YOUR TARGET URL HERE:
+        // ==========================================
+        const TARGET_URL = "https://www.youtube.com/watch?v=Ty_1R9hNfQI";
+        // ==========================================
+
+        // Immediate redirect via JS
+        window.location.replace(TARGET_URL);
+    </script>
+
+    <!-- Fallback redirect if JavaScript is disabled in the browser -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=https://example.com">
+    </noscript>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p>Redirecting you automatically...</p>
+        <p>If you are not redirected, <a id="redirect-link" href="#">click here</a>.</p>
+    </div>
+
+    <script>
+        // Set the link href dynamically to match TARGET_URL
+        document.getElementById('redirect-link').href = TARGET_URL;
+    </script>
+
+</body>
+</html>
